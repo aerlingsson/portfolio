@@ -1,4 +1,5 @@
-## Arnar Haukur Erlingsson - flurryBot
-FlurryBot is a simple Discord bot. I made this for fun, and to learn the fundamentals of JavaScript and the Discord API.
-I made this in a few hours, and have not revised it since.
-FlurryBot allows the users in a server to play Tic-Tac-Toe with them. However, flurryBot blatantly cheats if it's about to lose a game, meaning that the player always loses.
+## Arnar Haukur Erlingsson - Portfolio
+
+Each branch is a separate project. Refer to the readme of each branch for a description of specific projects.
+
+**Disclaimer: This repository does not represent how I interact with version control in a project setting**
