@@ -33,6 +33,12 @@ The `my_theme_enqueue_styles()` function registers the custom style, with `login
 #### style.css
 Is practically empty, however, it contains theme info and allows modifying the parent style.
 
+#### login.html
+Is the HTML file for the login screen. Currently only the **Login** button has functionality: it submits the data input into the **Brugernavn** and **Password** fields, using the `POST` method. 
+On line 3 we declare that we want to use the login_style stylesheet, enqueued in `functions.php`.
+On line 5 we create the login form, and state that we send the data to `login.php` on submit using the `POST` method.
+Name and id attributes can be removed for the `<form>` tag, as they are not currently used.
+
 #### login.php
 Contains functionality for the login screen. It is called when a user presses the **Login** button.
 
