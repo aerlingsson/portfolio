@@ -43,7 +43,8 @@ On line 5 we create the login form, and state that we send the data to `login.ph
 Name and id attributes can be removed for the `<form>` tag, as they are not currently used.
 
 #### login.php
-Contains functionality for the login screen. It is called when a user presses the **Login** button.
+Contains functionality for the login screen. It is called when a user presses the **Login** button on the login page. Any submitted data will be contained in the `$_POST` suberglobal. If `$_POST` is  Input usernames and passwords are accessible through their HTML `name` attributes: `$_POST["username"]` and `$_POST["pass"]`.
+On line 6 we construct an associative array, for the response, containing an empty result array and an empty error value.
 
 #### login_style.css
 Is the stylesheet for the login screen. We set text and password fields, as well as the **Login** button, to be 100% of the width of whatever parent contains it.
