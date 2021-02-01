@@ -18,7 +18,7 @@ Some tables still show some redundancy and need revision. For example, Dog_sale 
 ### Overview.png
 Is a diagram I made for my own understanding of HTTP requests to web servers, as well as to explain the client and server components of the website to the other team members. It is somewhat a mixture of a flow chart and a component diagram. It also contains an overview of HTTP response classes for quick reference.
 
-### login_screen.php
+### login_screen.png
 Shows a screenshot of a custom login screen for Migo. Functionality and styling is described in later sections.
 
 ### Heisengard-child
