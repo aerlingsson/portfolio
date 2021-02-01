@@ -7,7 +7,7 @@ if (!empty($_POST)){
     $username = $_POST["username"];
     $pass = $_POST["pass"];
 
-    /* Server side PHP input validation */
+    /* Input validation */
     if($username==="") {
         $response["error"] = "Please enter a username.";
     }elseif($pass===""){
