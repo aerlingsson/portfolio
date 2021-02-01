@@ -43,8 +43,14 @@ On line 5 we create the login form, and state that we send the data to `login.ph
 Name and id attributes can be removed for the `<form>` tag, as they are not currently used.
 
 #### login.php
-Contains functionality for the login screen. It is called when a user presses the **Login** button on the login page. Any submitted data will be contained in the `$_POST` suberglobal. If `$_POST` is  Input usernames and passwords are accessible through their HTML `name` attributes: `$_POST["username"]` and `$_POST["pass"]`.
-On line 6 we construct an associative array, for the response, containing an empty result array and an empty error value.
+Contains functionality for the login screen. It is called when a user presses the **Login** button on the login page. Any submitted data will be contained in the `$_POST` suberglobal. If `$_POST` is not empty, we import the WP database, `wpdb` - this provides easy query access to the WP database. Input usernames and passwords are accessible through their HTML `name` attributes: `$_POST["username"]` and `$_POST["pass"]`.
+
+On line 6 we construct an associative array, for the response, containing an empty result array and an empty error value. Input validation simply checks whether anything was input into the username and password fields. If any of the two are missing, an error value is assigned in `$response`. In case of them both missing, the username error message is overwritten by the password error message. This could be changed to be an array, to store both errors, if necessary.
+If both username and password are submitted, we encrypt the password, using PHP's built-in `password_hash()`.
+
+In this case we intentionally do not sanitize user input ourselves, as `$wpdb->prepare()` statements do this automatically. We prepare a SQL query to the database, to check if the input user exists and has the input password. We can do this without storing the user's actual password, as `password_hash()` produces the same output, given the same input and options. However, if we at some point change the options, or the implementation of `password_hash()` is changed, this approach may cause issues in the future.
+
+After preparing the query, we execute it and request the result as an associative array. If the amount of rows returned are < 1, the username does not exist. Else we check if the input password matches the stored password for that user. If successful, this functionality should redirect the user to another page, however, this functionality is not implemented here. When checking the query results, we echo the errors, if they happen. A better approach would be to continue using the `$response` array. Furthermore, the error message should state that either the username or password was wrong, instead of telling the user which is wrong. Telling the user that the password does not match the username, confirms to them that a user with that username exists - removing a variable from the equation, for someone trying to gain unauthorized access to the system.
 
 #### login_style.css
 Is the stylesheet for the login screen. We set text and password fields, as well as the **Login** button, to be 100% of the width of whatever parent contains it.
