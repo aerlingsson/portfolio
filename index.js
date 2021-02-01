@@ -2,7 +2,7 @@ const {prefix, token} = require("./config.json")
 const Discord = require("discord.js")
 
 const client = new Discord.Client()
-let rePut = /\#[p|P]ut \d$/
+let rePut = /\#[p|P]ut \d$/         // Regular expression to decode #put command
 let defVal = ":white_medium_square:"
 let pVal = ":regional_indicator_x:" // Player symbol - X
 let bVal = ":o2:"   // Bot symbol - O
