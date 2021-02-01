@@ -18,6 +18,9 @@ Some tables still show some redundancy and need revision. For example, Dog_sale 
 #### Overview.png
 Is a diagram I made for my own understanding of HTTP requests to web servers, as well as to explain the client and server components of the website to the other team members. It is somewhat a mixture of a flow chart and a component diagram. It also contains an overview of HTTP response classes for quick reference.
 
+#### login_screen.php
+Shows a screenshot of a custom login screen for Migo. Functionality and styling is described in later sections.
+
 #### Heisengard-child
 Is a child theme of the theme used on the website at the time. This contained all custom functionality and styling for the website - as is good practice for WordPress sites. It naturally inherits all styling and functionality from the parent theme, besides that which is overwritten/specified in the child folder. 
 Functions.php and style.css are default files. For a child theme to be functional these do not have to contain anything, however, anything added to the files adds to, or overwrites, inherited features from the parent theme. Any error in these files will crash the website, if the theme is applied.
@@ -25,12 +28,12 @@ Each of the following headers describe each file in this folder.
 
 ##### functions.php
 Describes a PHP function that registers, and enqueues a custom style. The file starts with a call to the `add_action()` WP function, which hooks the `my_theme_enqueue_styles()` function to the WP core. By not including the parentheses, we avoid calling it at the same time.
-The `my_theme_enqueue_styles()` function registers the custom style, with `login_style` as handle, the path to the custom CSS file, and the parent style as a dependency. It then enqueues it, making it accesible globally.
+The `my_theme_enqueue_styles()` function registers the custom style, with `login_style` as handle, the path to the custom CSS file, and the parent style as a dependency. It then enqueues it, making `login_style` accesible globally.
 
 ##### style.css
+Is practically empty, however, it contains theme info and allows modifying the parent style.
 
 ##### login.php
-
-##### login_config.php
+Is called when a user presses the **Login** button. 
 
 ##### login_style.css
