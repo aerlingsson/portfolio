@@ -1,5 +1,6 @@
 ## Arnar Haukur Erlingsson - flurryBot
 FlurryBot is a simple Discord bot. I made this for fun, to learn the fundamentals of JavaScript and the Discord API.
+
 **Disclaimer: I made this in a few hours, and it has not been revised since. I will emphasize, that this code is not built in a maintainable, or "good practice" way for the most part. I also point several issues with this code.**
 
 ### The bot
