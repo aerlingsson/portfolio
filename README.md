@@ -5,17 +5,20 @@ Most of my implemented work was done on the website, based on WordPress (WP).
 All files included in this branch are my own work.
 Each of the following headers briefly describe each file.
 
-### UML.png
+### Diagrams
+Is a folder containing diagrams and database tables I created while working for Migo.
+
+#### UML.png
 Is a class diagram of the problem domain as described by the founders.
 The structure is complete, however, the attributes of each class is not fully fleshed out and the modifiers are not accurate; not all attributes should be public.
 Closed, hollow arrows denote generalization, open arrows denote association, and the diamond arrows denote composition.
 
-### DB_Schemas.pdf
+#### DB_Schemas.pdf
 Contains the tables I designed for the database for Migo and they contain some dummy data. These tables were added to the website's WordPress database.
 Most notable here is the User table, which is more developed than the other tables, and contains a foreign key to the Zip_Codes table, which has a foreign key to the Country table. This reduces redundancy and space in the database.
 Some tables still show some redundancy and need revision. For example, Dog_sale has a foreign key to the Dog table, and both tables store each dog's race. This attribute should be removed from the Dog_sale table. The address format in the User table can also be changed to use only a single varchar column, instead of multiple columns.
 
-### Overview.png
+#### Overview.png
 Is a diagram I made for my own understanding of HTTP requests to web servers, as well as to explain the client and server components of the website to the other team members. It is somewhat a mixture of a flow chart and a component diagram. It also contains an overview of HTTP response classes for quick reference.
 
 ### login_screen.png
@@ -43,3 +46,6 @@ Name and id attributes can be removed for the `<form>` tag, as they are not curr
 Contains functionality for the login screen. It is called when a user presses the **Login** button.
 
 #### login_style.css
+Is the stylesheet for the login screen. We set text and password fields, as well as the **Login** button, to be 100% of the width of whatever parent contains it.
+We also set custom styling for the **Fortryd** button and make buttons go slightly transparent when hovering over them. As we do not define any color for the hover, buttons also become gray when hovered over.
+Finally, we set the logo picture to be 30% of the width and set the border radius to be 50%. This gives the logo a circular look, rather than a square one. We also set the margin to auto - making sure that the logo can scale to any screen size.
