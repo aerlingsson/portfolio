@@ -1,7 +1,7 @@
 ## Arnar Haukur Erlingsson - MIGO
-This branch contains the work I did for Migo: a startup company I volunteered for, for three months with three other individuals, before disbanding.
+This branch contains the work I did for Migo: a startup company I volunteered for, for three months, before it disbanded.
 Migo was to be a platform for buying and selling dogs as pets. This should support both dog pounds and private individuals.
-Most of my work were was done on the website, based on WordPress (WP).
+Most of my implemented work was done on the website, based on WordPress (WP).
 All files included in this branch are my own work.
 Each of the following headers briefly describe each file.
 
@@ -27,13 +27,13 @@ Functions.php and style.css are default files. For a child theme to be functiona
 Each of the following headers describe each file in this folder.
 
 #### functions.php
-Describes a PHP function that registers, and enqueues a custom style. The file starts with a call to the `add_action()` WP function, which hooks the `my_theme_enqueue_styles()` function to the WP core. By not including the parentheses, we avoid calling it at the same time.
-The `my_theme_enqueue_styles()` function registers the custom style, with `login_style` as handle, the path to the custom CSS file, and the parent style as a dependency. It then enqueues it, making `login_style` accesible globally.
+Describes a PHP function that registers and enqueues a custom style. The file starts with a call to the `add_action()` WP function, which hooks the `my_theme_enqueue_styles()` function to the WP core. By not including the parentheses, we avoid calling it at the same time.
+The `my_theme_enqueue_styles()` function registers the custom style, with `login_style` as handle, the path to the custom CSS file, and the parent style as a dependency. It then enqueues it, making `login_style` accessible globally.
 
 #### style.css
 Is practically empty, however, it contains theme info and allows modifying the parent style.
 
 #### login.php
-Is called when a user presses the **Login** button. 
+Contains functionality for the login screen. It is called when a user presses the **Login** button.
 
 #### login_style.css
