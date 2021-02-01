@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<HTML>
+    <link href="login_style.css" rel="stylesheet" type="text/css" />
+
+    <form action="login.php" method="post" name="login_form" id="login_form"> 
+        <div class="imgcontainer"> 
+            <img src="https://www.minmigo.dk/wp-content/uploads/2020/06/IG-logo-kun-M.png" alt="Avatar" class="avatar"> 
+        </div>
+          
+        <div class="container"> 
+            <label><b>Brugernavn</b></label> 
+            <input type="text" placeholder="Brugernavn" name="username" id="username" required=""> 
+  
+            <label><b>Password</b></label> 
+            <input type="password" placeholder="Password" name="pass" id="pass" required=""> 
+  
+            <button type="submit">Login</button> 
+            <input type="checkbox" checked="checked"> Husk Mig 
+        </div>
+          
+        <div class="container" style="background-color:#f1f1f1"> 
+            <button type="button" class="cancelbtn">Fortryd</button> 
+            <span class="psw">Glemt <a href="#">password?</a></span> 
+        </div> 
+    </form>
+</HTML>
