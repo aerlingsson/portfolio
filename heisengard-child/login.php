@@ -1,5 +1,4 @@
 <?php
-require_once ('../../../wp-config.php');
 
 if (!empty($_POST)){
 	global $wpdb;
