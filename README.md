@@ -1,6 +1,6 @@
 ## Arnar Haukur Erlingsson - flurryBot
 
-**Disclaimer: I made this for fun, in just a few hours, to learn the fundamentals of JavaScript and the Discord API, and it has not been revised since. I will emphasize, that this code is not built in a maintainable, or "good practice" way for the most part. I point out several of these issues in the following section.**
+**Disclaimer: I made this for fun, in just a few hours, to learn the fundamentals of JavaScript and the Discord API, and it has not been revised since. I will emphasize, that this code is not built in a maintainable, modular, or "good practice" way for the most part. I point out several of these issues in the following section.**
 
 ### The bot
 FlurryBot allows the users in a server to play Tic-Tac-Toe with them. However, flurryBot blatantly cheats if it's about to lose a game, meaning that the player always loses. I've only included the main code file: `index.js`. While a few more files are needed in the project for it to function, `index.js` contains all the functionality and is the entrypoint for the application.
